@@ -14,11 +14,11 @@ import java.util.List;
 public class DbHandler extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static final String DB_NAME = "TransactionManager";
-    private static final String TB_NAME = "Transactions";
-    private static final String KEY_ID = "id";
-    private static final String KEY_DATE = "date";
-    private static final String KEY_AMOUNT = "amount";
-    private static final String KEY_DEBIT_CREDIT = "debit_credit";
+    public static final String TB_NAME = "Transactions";
+    public static final String KEY_ID = "id";
+    public static final String KEY_DATE = "date";
+    public static final String KEY_AMOUNT = "amount";
+    public static final String KEY_DEBIT_CREDIT = "debit_credit";
 
     public DbHandler(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);

@@ -2,11 +2,16 @@ package com.example.cobauts;
 
 public class Transaction {
     int id;
+    String username;
+    String password;
     String date;
     String amount;
     String debitCredit;
 
-    public Transaction(String date, String amount, String debitCredit) {
+    public Transaction(String username, String password,String date, String amount, String debitCredit) {
+        this.username = username;
+        this.password = password;
+
         this.date = date;
         this.amount = amount;
         this.debitCredit = debitCredit;
@@ -22,6 +27,21 @@ public class Transaction {
     public int getId() {
         return id;
     }
+
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getDate() {
         return date;
     }

@@ -25,13 +25,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String username = usernameEditText.getText().toString();
-                // You can add authentication logic here
+                String password = passwordEditText.getText().toString();
 
-                // Assuming authentication is successful, proceed to the second screen
-                Intent intent = new Intent(MainActivity.this, ContactListActivity.class);
-                intent.putExtra("username", username);
-                startActivity(intent);
+                // Anda dapat menambahkan logika otentikasi di sini jika diperlukan
+                if (!username.isEmpty() && !password.isEmpty()) {
+                    // Jika kedua input tidak kosong, lanjutkan ke aktivitas berikutnya
+                    Intent intent = new Intent(MainActivity.this, ContactListActivity.class);
+                    intent.putExtra("username", username);
+                    intent.putExtra("password", password);
+                    startActivity(intent);
+                } else {
+                    // Tampilkan pesan kesalahan jika salah satu atau kedua input kosong
+                    if (username.isEmpty()) {
+                        usernameEditText.setError("Username Harap Diisi!");
+                    }
+                    if (password.isEmpty()) {
+                        passwordEditText.setError("Harap Password Diisi!");
+                    }
+                }
             }
         });
+
+
+
+
     }
 }
