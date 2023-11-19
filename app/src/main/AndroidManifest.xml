@@ -25,6 +25,7 @@
         <activity
             android:name=".ContactListActivity"
             android:exported="false" />
+
         <activity
             android:name=".AddTransactionActivity"
             android:exported="false" />
